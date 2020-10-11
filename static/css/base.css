@@ -102,4 +102,33 @@
       display: none;
     }
     }
-    
+    .about-w3lsrow {
+      margin: 4em 0 0 0;
+  }
+  .w3about-img {
+      background: url(../images/2.jpg)no-repeat 0px 0px;
+      background-size: cover;
+      min-height: 30em;
+      padding: 0;
+    position:relative;
+  }
+  .w3about-text {
+      background: #f2f2f2;
+      position: absolute;
+      width: 56%;
+      padding: 3em;
+      right: -30%;
+      top: 27%;
+  }
+  .w3about-text h5 {
+      font-size: 2.5em;
+      color: #212121;
+      margin: 0;
+  } 
+  .w3about-text p{
+    color:#999999;
+    font-size:.9em;
+    line-height:1.8em;
+    margin:1em 0 0 0;
+  }
+  /*-- //about--*/    
