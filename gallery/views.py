@@ -5,7 +5,7 @@ from .models import Image, Category, Location
  
 def home(request):
     images = Image.objects.all()
-    print(images[0].category)
+    print(images.category)
     arr= np.array(images) 
     newarr = np.array_split(arr,3)
     first = newarr[0]
@@ -37,7 +37,7 @@ def search_results(request):
         message = "You haven't searched for any category"
         return render(request, 'search.html',{"message":message})
 
-        
+
 def image(request, image_id):
     try:
         image = Image.objects.get(id=image_id)
