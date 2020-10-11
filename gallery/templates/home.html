@@ -24,17 +24,21 @@
 <!-- portfolio -->
 <div class="portfolio" id="gallery">
     <div class="container">
-        <div class="agileits-title"> 
+        <div class="agileits-title">
+            {% if categories %} 
             <h3>Categories</h3> 
         </div>
+             {% for category in categories %}
         <ul class="simplefilter w3layouts agileits">
             <li class="active w3layouts agileits" data-filter="all">All</li>
-            <li class="w3layouts agileits" data-filter="1">Bloody Pirates!!</li>
-            <li class="w3layouts agileits" data-filter="2">Magical Places</li>
+            <li class="w3layouts agileits" data-filter="1">{{ category.name }}</li>
+            <!--<li class="w3layouts agileits" data-filter="2">Magical Places</li>
             <li class="w3layouts agileits" data-filter="3">Hairstyles</li>
             <li class="w3layouts agileits" data-filter="4">Art</li>
-            <li class="w3layouts agileits" data-filter="5">Destinations</li>
+            <li class="w3layouts agileits" data-filter="5">Destinations</li>-->
         </ul>
+               {% endfor %}
+               {% endif %}
 
         <div class="filtr-container w3layouts agileits">
 
@@ -42,7 +46,7 @@
             <div class="filtr-item w3layouts agileits portfolio-t" data-category="1, 5" data-sort="Busy streets">
                 <a href="{{image.id}}" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                     <figure>
-                        <img id={{image.name}} src="{{image.photo.url}}" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+                        <img id={{image.name}} src="{{image.photo.url}}" class="img-responsive w3layouts agileits '{{image.description}}','{{image.photo.url}}','{{image.location}}','{{image.location.id}}')" alt="W3layouts Agileits">
                         <figcaption>
                             <h3>'{{image.category}}'</h3>
                         </figcaption>
@@ -52,12 +56,12 @@
             {%endfor%}
 
             {% for image in second %}
-            <div class="filtr-item w3layouts agileits" data-category="2, 5" data-sort="Luminous night">
-                <a href="images/p2.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+            <div class="filtr-item w3layouts agileits portfolio-t" data-category="1, 5" data-sort="Busy streets">
+                <a href="{{image.id}}" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                     <figure>
-                        <img src="images/p2.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+                        <img id={{image.name}} src="{{image.photo.url}}" class="img-responsive w3layouts agileits '{{image.description}}','{{image.photo.url}}','{{image.location}}','{{image.location.id}}')" alt="W3layouts Agileits">
                         <figcaption>
-                            <h3>Gaming <span>Store</span></h3>
+                            <h3>'{{image.category}}'</h3>
                         </figcaption>
                     </figure>
                 </a>
@@ -65,88 +69,31 @@
             {%endfor%}
 
             {% for image in third %}
-            <div class="filtr-item w3layouts agileits" data-category="1, 4" data-sort="City wonders">
-                <a href="images/p3.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+            <div class="filtr-item w3layouts agileits portfolio-t" data-category="1, 5" data-sort="Busy streets">
+                <a href="{{image.id}}" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                     <figure>
-                        <img src="images/p3.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+                        <img id={{image.name}} src="{{image.photo.url}}" class="img-responsive w3layouts agileits '{{image.description}}','{{image.photo.url}}','{{image.location}}','{{image.location.id}}')" alt="W3layouts Agileits">
                         <figcaption>
-                            <h3>Gaming <span>Store</span></h3>
+                            <h3>'{{image.category}}'</h3>
                         </figcaption>
                     </figure>
                 </a>
             </div>
+
             {%endfor%}
 
             {% for image in fourth %}
-            <div class="filtr-item w3layouts agileits" data-category="3" data-sort="In production">
-                <a href="images/p4.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+            <div class="filtr-item w3layouts agileits portfolio-t" data-category="1, 5" data-sort="Busy streets">
+                <a href="{{image.id}}" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                     <figure>
-                        <img src="images/p4.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+                        <img id={{image.name}} src="{{image.photo.url}}" class="img-responsive w3layouts agileits '{{image.description}}','{{image.photo.url}}','{{image.location}}','{{image.location.id}}')" alt="W3layouts Agileits">
                         <figcaption>
-                            <h3>Gaming <span>Store</span></h3>
+                            <h3>'{{image.category}}'</h3>
                         </figcaption>
                     </figure>
                 </a>
             </div>
+            
             {%endfor%}
 
-            <div class="filtr-item w3layouts agileits" data-category="3, 4" data-sort="Industrial site">
-                <a href="images/p5.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
-                    <figure>
-                        <img src="images/p5.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
-                        <figcaption>
-                            <h3>Gaming <span>Store</span></h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="filtr-item w3layouts agileits" data-category="2, 4" data-sort="Peaceful lake">
-                <a href="images/p6.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
-                    <figure>
-                        <img src="images/p6.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
-                        <figcaption>
-                            <h3>Gaming <span>Store</span></h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="filtr-item w3layouts agileits" data-category="1, 5" data-sort="City lights">
-                <a href="images/p7.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
-                    <figure>
-                        <img src="images/p7.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
-                        <figcaption>
-                            <h3>Gaming <span>Store</span></h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="filtr-item w3layouts agileits" data-category="2, 4" data-sort="Dreamhouse">
-                <a href="images/p8.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
-                    <figure>
-                        <img src="images/p8.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
-                        <figcaption>
-                            <h3>Gaming <span>Store</span></h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="filtr-item w3layouts agileits" data-category="2, 4" data-sort="Dreamhouse">
-                <a href="images/p1.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
-                    <figure>
-                        <img src="images/p1.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
-                        <figcaption>
-                            <h3>Gaming <span>Store</span></h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!-- //portfolio -->
 {% endblock %}
