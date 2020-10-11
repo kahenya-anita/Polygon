@@ -1,0 +1,76 @@
+.site-header .main-navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+    float: right;
+  }
+  
+  .site-header .main-navigation {
+    display: block;
+    text-align: center;
+    padding: 0px 0px;
+  }
+  .site-header .main-navigation ul li {
+    display: inline-block;
+    margin-left: 1px;
+  }
+  .site-header .main-navigation ul li:last-child {
+    margin-right: 0px !important;
+  }
+  .site-header .main-navigation ul li a {
+    padding: 20px 20px;
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    font-family: 'Lobster Two', cursive;
+    background: #343536;
+    text-transform: uppercase;
+  }
+  .site-header .main-navigation ul li a.active {
+    color: #b69e40;
+    text-decoration: none;
+  }
+  .site-header .templatemo_logo {
+    margin-top: 60px;
+    display: inline-block;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  a.menu-toggle-btn {
+    padding: 12px 0;
+    display: block;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .responsive-menu {
+    display: none;
+    background: #343536;
+  }
+  
+  .responsive_menu {
+    display: none;
+    background-color: #2a2a2a;
+  }
+  .responsive_menu ul li {
+    display: block !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #444444;
+  }
+  .responsive_menu ul li a {
+    padding: 15px 0 !important;
+    display: block !important;
+  }
+  
+  .templatemorow	{ margin: 0px 30px; }
+  .templatemo_servicerow	{ margin: 0px; }
+  .blok	{ position: absolute; }
+  .hex	{ width: 20%; float: left; }
+  .hex-offset	{ margin-left: 10%; }
+  .hexagon2, .hexagonteam {
+      position: absolute;
+      width: 200px;
+      height: 400px;
+      top: -85px;
+  }
