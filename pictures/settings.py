@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+import cloudinary
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,6 +42,12 @@ INSTALLED_APPS = [
     'bootstrap4',
 ]
 
+cloudinary.config( 
+  cloud_name = os.environ.get('CLOUD_NAME'), 
+   api_key = os.environ.get('API_KEY'), 
+  api_secret = os.environ.get('API_SECRET') 
+  )
+  
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
