@@ -1,5 +1,5 @@
 html, body {
-	font-family: 'Lobster Two', cursive; 
+	font-family: 'Neuton', serif; 
 	padding: 0px; 
 	margin: 0px; 
 	color: #e7e7e7;
@@ -74,7 +74,7 @@ span.fa	{ width: 100%; text-align: center; }
     display: inline-block;
     color: white;
     font-size: 16px;
-    font-family: 'Lobster Two', cursive;
+    font-family: 'Neuton', serif;
     background: #343536;
     text-transform: uppercase;
   }
@@ -223,7 +223,7 @@ span.fa	{ width: 100%; text-align: center; }
     border: 2px solid #ff9800;
     color: #ffffff;
     background: #ff9800;
-	border-radius: 30px;
+	  border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -o-border-radius: 30px;
