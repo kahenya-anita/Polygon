@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^vu=3+$5)kn7a*huyvc3(e$g9)cnf#p@a--52pq$(i+u(i@j8o'
+SECRET_KEY = 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -47,7 +47,7 @@ cloudinary.config(
    api_key = os.environ.get('API_KEY'), 
   api_secret = os.environ.get('API_SECRET') 
   )
-  
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
