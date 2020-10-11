@@ -74,3 +74,32 @@
       height: 400px;
       top: -85px;
   }
+  @media only screen and (max-width: 1000px) {
+    .site-header .main-navigation ul {
+      padding: 0;
+      margin: 0;
+      list-style: none; 
+      float: none;
+    }
+  
+    .site-header .main-navigation {
+      padding: 0;
+    }
+    .site-header .main-navigation .container {
+      width: 100%;
+    }
+  
+    .responsive-menu {
+      display: block;
+    }
+  
+    .main_menu {
+      display: none;
+    }
+  
+    .services #icons .icon-item span,
+    .about #icons-about .icon-item span {
+      display: none;
+    }
+    }
+    
