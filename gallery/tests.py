@@ -52,7 +52,7 @@ class CategoryTest(TestCase):
         tests whether the category name is updated
         '''
         self.destinations.save_category()
-        self.destinations.update_category(self.nature.id,'travel')
+        self.destinations.update_category(self.destinations.id,'travel')
         update = Category.objects.get(name = "travel")
         self.assertEqual(update.name, 'travel')
 
@@ -75,7 +75,7 @@ class ImageTestClass(TestCase):
         '''
         creates new instances before a test
         '''
-        self.nature = Category( name= "nature")
+        self.destinations = Category( name= "destinations")
         self.nakuru = Location (name = "Nakuru")
         self.flower = Image(photo = "image.png", name ='maua', description = 'beautiful', category= self.destinations, location= self.nakuru)
 
@@ -113,7 +113,7 @@ class ImageTestClass(TestCase):
         '''
         test whether we can display images from the db
         '''
-        self.art.save_category()
+        self.destinations.save_category()
         self.nakuru.save_location()
         temp_file = tempfile.NamedTemporaryFile()
         test_image = get_temporary_image(temp_file)
