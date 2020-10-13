@@ -1,0 +1,81 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Cute+Font|Almendra");
+    @import url("https://fonts.googleapis.com/css?family=Amita");
+    .container-fluid {
+        background-color: rgb(228, 198, 198);
+        height: 100vh;
+    }
+    
+    #transparent {
+        background-color: transparent;
+    }
+    
+    h1 {
+        /* font-family: Almendra, Courier, monospace; */
+        color: rgb(30, 56, 9);
+    }
+    
+    #myInput {
+        color: rgb(30, 56, 9);
+        font-size: 30px;
+    }
+    
+    h5 {
+        color: rgb(30, 56, 9);
+        letter-spacing: 5px;
+        font-family: Almendra;
+        -webkit-text-decoration-color: salmon;
+        text-decoration-color: rgb(139, 94, 88);
+        -webkit-text-decoration-style: wavy;
+        text-decoration-style: wavy;
+    }
+</style>
+<div class="container-fluid">
+    <div class="d-flex justify-content-start"><a href="{% url 'polygon' %}" class="card-link"><button type="button" class="btn btn-primary">Back</button></a></div>
+
+    <div class="d-flex justify-content-center">
+        <h1 class="text-center my-3">
+            <h1 class="text-center my-4">{{image.category}}</h1>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4 animate__animated animate__fadeInLeftBig">
+            <img src='{{image.image.url}}' class="img-fluid z-depth-1-half" alt="">
+        </div>
+        <!--Grid column-->
+        <div class="card-body my-1">
+            <h5 class="card-title"> {{image.name|upper}}</h5>
+            <hr>
+            <!-- Text -->
+            <ul class="card-text list-group list-group-flush animate__animated animate__fadeInUp" style="width: 500px;color: rgb(30, 56, 9);
+            font-family: Almendra;
+            font-size: 24px;">
+                <li class="list-group-item" id="transparent"> <i class="fas fa-audio-description"></i> Description: {{image.descripton}}</li>
+                <li class="list-group-item" id="transparent"> <i class="fas fa-search-location"></i> Location: {{image.location}}</li>
+                <li class="list-group-item" id="transparent"> <i class="fas fa-copy"></i> Copy:
+                    <div class="d-flex justify-content-center">
+                        <input class="form-control" type="text" value="{{image.image}}" id="myInput" style="color: rgb(30, 56, 9); background-color: transparent; font-size: 16px;">
+                        <button type="button" style="width: 150px;" class="btn btn-dark-green" onclick="myFunction()">Copy Url</button>
+                    </div>
+                   
+                </li>
+                <script>
+                    function myFunction() {
+                        var copyText = document.getElementById("myInput");
+                        copyText.select();
+                        document.execCommand("Copy");
+                    }
+                </script>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

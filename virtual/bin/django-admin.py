@@ -1,4 +1,4 @@
-#!/home/toshiba/Documents/Polygon/virtual/bin/python
+#!/home/toshiba/Documents/Gallerie/virtual/bin/python
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

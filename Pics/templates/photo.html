@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+            {% for image_item in images %}
+                <div class="col-sm-4 my-4">
+                    <div class="card" style="width: 25rem;">
+                      <img src="{{ image_item.image.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title ml-2" style="font-weight: bold; font-family: cursive;">{{ image_item.name }}</h5>
+                            <a href="/show/{{image_item.id}}" class=" my-3 card-link animate__animated animate__flash animate__infinite	infinite"><button type="button" class="btn btn-light yellow animate__animated animate__animate__fadeIn animate__infinite	infinite">View</button></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+{% endblock %}
+    
